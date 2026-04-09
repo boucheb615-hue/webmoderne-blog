@@ -1,0 +1,19 @@
+
+title: WebModerne Research
+email: angel@webmoderne.com
+description: L'IA vulgarisée. Nous disséquons les rapports scientifiques pour les rendre accessibles à tous.
+baseurl: "" 
+url: "https://blog.webmoderne.com"
+
+# Branding
+brand_color_primary: "#090935"
+brand_color_secondary: "#db1a1a"
+
+# Google Analytics Placeholder
+google_analytics: "UA-XXXXX-Y"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/

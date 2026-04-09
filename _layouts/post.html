@@ -1,0 +1,12 @@
+
+---
+layout: default
+---
+<article>
+    <h2>{{ page.title }}</h2>
+    <p style="opacity: 0.7;">Publié le {{ page.date | date: "%d %B %Y" }}</p>
+    <hr style="border: 1px solid var(--accent-red);">
+    <div class="content">
+        {{ content }}
+    </div>
+</article>
