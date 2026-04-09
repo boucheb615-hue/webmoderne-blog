@@ -1,24 +1,18 @@
 
----
-layout: default
-title: Accueil
----
-<div class="cli-box">
-    <span class="cli-prompt">webmoderne@research:~/</span> <span style="color: #00ff41;">cat welcome.txt</span>
-    <p style="margin-top: 1rem;">
-        Bienvenue sur le blog de recherche WebModerne. <br>
-        Ici, nous transformons la complexité des papiers arXiv en insights actionnables. 
-        Pas de jargon, juste la substance.
-    </p>
-</div>
-
-<h3>Dernières Analyses</h3>
-<div class="posts-list">
-    {% for post in site.posts %}
-        <div class="post-card">
-            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-            <p>{{ post.excerpt }}</p>
-            <small>{{ post.date | date: "%d %B %Y" }}</small>
-        </div>
-    {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WebModerne Blog - Test</title>
+    <style>
+        body { background: #090935; color: white; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { border: 2px solid #db1a1a; padding: 2rem; box-shadow: 5px 5px 0px #db1a1a; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>SYSTEM ONLINE</h1>
+        <p>Le blog WebModerne est en cours de déploiement...</p>
+    </style>
+</body>
+</html>
