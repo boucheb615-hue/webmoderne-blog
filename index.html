@@ -1,50 +1,76 @@
----
-layout: default
-title: Accueil
----
-<style>
-:root {
-    --bg-deep: #090935;
-    --accent-red: #db1a1a;
-    --text-white: #ffffff;
-    --terminal-green: #00ff41;
-    --font-mono: 'Fira Code', 'Courier New', monospace;
-}
-body { background-color: var(--bg-deep); color: var(--text-white); font-family: var(--font-mono); }
-.cli-box {
-    background: #050520;
-    border: 1px solid var(--text-white);
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px var(--accent-red);
-    margin: 1.5rem 0;
-}
-.cli-prompt { color: var(--terminal-green); font-weight: bold; }
-.post-card {
-    border: 1px solid #1a1a4d;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-.post-card:hover { border-color: var(--accent-red); }
-a { color: var(--text-white); text-decoration: none; border-bottom: 1px dashed var(--accent-red); }
-</style>
 
-<div class="cli-box">
-    <span class="cli-prompt">webmoderne@research:~/</span> <span style="color: #00ff41;">cat welcome.txt</span>
-    <p style="margin-top: 1rem;">
-        Bienvenue sur le blog de recherche WebModerne. <br>
-        Ici, nous transformons la complexité des papiers arXiv en insights actionnables. 
-        Pas de jargon, juste la substance.
-    </p>
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebModerne Research</title>
+    <style>
+        :root {
+            --bg-deep: #090935;
+            --accent-red: #db1a1a;
+            --text-white: #ffffff;
+            --terminal-green: #00ff41;
+            --font-mono: 'Fira Code', 'Courier New', monospace;
+        }
+        body { 
+            background-color: var(--bg-deep); 
+            color: var(--text-white); 
+            font-family: var(--font-mono); 
+            margin: 0; 
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        header {
+            border-bottom: 3px solid var(--accent-red);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 { color: var(--accent-red); text-transform: uppercase; margin: 0; }
+        .cli-box {
+            background: #050520;
+            border: 1px solid var(--text-white);
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 5px 5px 0px var(--accent-red);
+            margin: 2rem 0;
+        }
+        .cli-prompt { color: var(--terminal-green); font-weight: bold; }
+        a { color: var(--text-white); text-decoration: none; border-bottom: 1px dashed var(--accent-red); }
+        .status-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--accent-red);
+            color: white;
+            font-size: 0.7rem;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebModerne <span class="status-tag">V1.0 - ONLINE</span></h1>
+    </header>
 
-<h3 style="color: var(--accent-red); text-transform: uppercase;">Dernières Analyses</h3>
-<div class="posts-list">
-    {% for post in site.posts %}
-        <div class="post-card">
-            <h4 style="color: var(--text-white);"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-            <p>{{ post.excerpt }}</p>
-            <small style="opacity: 0.6;">{{ post.date | date: "%d %B %Y" }}</small>
-        </div>
-    {% endfor %}
-</div>
+    <div class="cli-box">
+        <span class="cli-prompt">webmoderne@research:~/</span> <span style="color: #00ff41;">cat welcome.txt</span>
+        <p style="margin-top: 1rem;">
+            Bienvenue sur le blog de recherche WebModerne.<br>
+            Ici, nous transformons la complexité des papiers arXiv en insights actionnables.<br>
+            <strong>Pas de jargon, juste la substance.</strong>
+        </p>
+    </div>
+
+    <h2 style="color: var(--accent-red);">Dernières Analyses</h2>
+    <div style="border: 1px solid #1a1a4d; padding: 1rem; background: #0a0a3a;">
+        <h3 style="margin: 0;"><a href="#">Comprendre les Transformers : Le Cerveau de ChatGPT</a></h3>
+        <p>Pourquoi l'architecture Transformer a tout changé dans l'IA...</p>
+        <small style="opacity: 0.6;">Publié le 09 Avril 2026</small>
+    </div>
+
+    <footer style="margin-top: 4rem; font-size: 0.8rem; opacity: 0.5; text-align: center;">
+        &copy; 2026 WebModerne. Built with AI & Logic.
+    </footer>
+</body>
+</html>
